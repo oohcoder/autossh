@@ -1,0 +1,9 @@
+touch IPLIST
+the contents of IPLIST is like this:
+1.1.1.1 user1 passwd2 #comment1
+1.1.1.2 user2 passwd2 #comment2
+first run:
+autoauth $iprank
+and input yes
+sencond run:
+autoload $iprank
