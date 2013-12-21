@@ -1,6 +1,6 @@
 BEGIN{
     F = "#"
-        iprank = 1
+    iprank = 1
 }
 
 {
@@ -8,19 +8,19 @@ BEGIN{
     user = $2
     passwd = $3
     desc = $4
-        loginip[iprank]=ip
-        loginuser[iprank]=user
-        loginpasswd[iprank]=passwd
-        logindesc[iprank]=desc
-        iprank++
+    loginip[iprank]=ip
+    loginuser[iprank]=user
+    loginpasswd[iprank]=passwd
+    logindesc[iprank]=desc
+    iprank++
 }
 
 END {
     if(loadiprank > 0){
-        #输出登录的ip、用户名、密码
+#输出登录的ip、用户名、密码
         print loginip[loadiprank]" "loginuser[loadiprank]" "loginpasswd[loadiprank]
     } else {
-        #输出所有ip、密码及说明
+#输出所有ip、密码及说明
         for( i=1; i < iprank; i++ ){
             print i" "loginip[i]" "loginuser[i]" "loginpasswd[i]" "logindesc[i]
         }
