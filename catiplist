@@ -22,7 +22,7 @@ END {
     } else {
 #输出所有ip、密码及说明
         for( i=1; i < iprank; i++ ){
-            print i" "loginip[i]" "loginuser[i]" "loginpasswd[i]" "logindesc[i]
+            print "\033[40;33m"i" \t\033[0m \033[0;36m"loginip[i]"\t\t\033[0m \033[1;31m"loginuser[i]"\t\t\033[0m \033[1;34m"loginpasswd[i]"\t\t\033[0m \033[0;32m"logindesc[i]"\033[0m"
         }
     }
 }
